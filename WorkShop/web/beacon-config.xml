@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beacon-config>
+	<beacons>
+		<beacon uuid="E2CAFB03-EB2C-436C-8978-E3815215B963" major="1" minor="1">
+			<local-notification>
+<!-- 			繰り返す回数(なのでこの場合4回通知される) -->
+				<retry-count>3</retry-count>
+				<retry-interval-minutes>1</retry-interval-minutes>
+				<reset-interval-minutes>3</reset-interval-minutes>
+<!-- 				発動の条件 -->
+				<conditions>
+					<condition>
+						<monitoring-range-meters from="0" to="3" />
+						<message lang="ja">来店ありがとうございます</message>
+<!-- 						このページに飛ぶという意味 -->
+						<url>local://thanks.html</url>
+					</condition>
+				</conditions>
+			</local-notification>
+<!-- 			履歴の情報をどの程度保存するかの設定 -->
+			<history>
+				<max-history>100</max-history>
+				<interval-seconds>60</interval-seconds>
+				<expired-days>90</expired-days>
+			</history>
+		</beacon>
+		<beacon uuid="E2CAFB03-EB2C-436C-8978-E3815215B964" major="2" minor="1">
+			<local-notification>
+				<retry-count>3</retry-count>
+				<retry-interval-minutes>1</retry-interval-minutes>
+				<reset-interval-minutes>3</reset-interval-minutes>
+				<conditions>
+					<condition>
+						<monitoring-range-meters to="3" />
+						<message lang="ja">クーポンが受け取れます</message>
+						<url>local://coupon.html</url>
+					</condition>
+				</conditions>
+			</local-notification>
+			<history>
+				<max-history>100</max-history>
+				<interval-seconds>60</interval-seconds>
+				<expired-days>90</expired-days>
+			</history>
+		</beacon>
+	</beacons>
+</beacon-config>

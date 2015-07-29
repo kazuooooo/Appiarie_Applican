@@ -1,0 +1,19 @@
+<applican-configuration>
+
+	<property name="PULL_TO_REFRESH">false</property>
+
+	<property name="RESUME_RELOAD">false</property>
+
+	<property name="SCREEN_ORIENTATION_LANDSCAPE">false</property>
+
+	<property name="SCREEN_ORIENTATION_PORTRAIT">true</property>
+
+	<property name="NAVIGATION_BAR">true</property>
+
+	<property name="STATUS_BAR">true</property>
+
+	<property name="SYSTEM_UI_NAVIGATION_BAR">true</property>
+
+	<property name="WEBVIEW_BOUNCES">true</property>
+
+</applican-configuration>
